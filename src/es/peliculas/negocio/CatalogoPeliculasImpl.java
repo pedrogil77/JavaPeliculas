@@ -12,9 +12,9 @@ public class CatalogoPeliculasImpl implements ICatalogoPeliculas{
     private final IAccesoDatos datos;
 
     public CatalogoPeliculasImpl() {
+        
         this.datos = new AccesoDatosImpl();
     }
-        
     
 
     @Override
@@ -81,8 +81,8 @@ public class CatalogoPeliculasImpl implements ICatalogoPeliculas{
             }
         } catch (AccesoDatosEx ex) {
             
-            System.out.println("Error al iniciar el catalogo");
-            ex.printStackTrace();
+            System.out.println("Error al iniciar el catalogo.");
+            
         }
     }
     

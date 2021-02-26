@@ -27,16 +27,13 @@ public class AccesoDatosImpl implements IAccesoDatos {
                 Pelicula pelicula = new Pelicula(linea);
                 peliculas.add(pelicula);
                 linea = entrada.readLine();
-                
 
             }
             entrada.close();
         } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
             throw new LecturaDatosEx("Excepcion al listar peliculas " + ex.getMessage());
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw new LecturaDatosEx("Excepcion al listar peliculas " + e.getMessage());
+        } catch (IOException ex) {
+            throw new LecturaDatosEx("Excepcion al listar peliculas " + ex.getMessage());
         }
         return peliculas;
     }

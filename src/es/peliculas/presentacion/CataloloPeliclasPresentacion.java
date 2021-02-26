@@ -13,8 +13,9 @@ public class CataloloPeliclasPresentacion {
         
         int opcion = -1;
         Scanner sc = new Scanner(System.in);
-        final ICatalogoPeliculas catalogoPeliculas;
-        catalogoPeliculas = new CatalogoPeliculasImpl();
+        //final ICatalogoPeliculas catalogoPeliculas;
+        //catalogoPeliculas = new CatalogoPeliculasImpl();
+        final ICatalogoPeliculas catalogoPeliculas = new CatalogoPeliculasImpl();
         final String nombreArchivo = CatalogoPeliculasImpl.NOMBRE_RECURSO;
         
         
@@ -28,7 +29,6 @@ public class CataloloPeliclasPresentacion {
             System.out.println("Introduzca una opción:");
             opcion = Integer.parseInt(sc.nextLine());
             
-   
         
             switch (opcion){
 
@@ -37,7 +37,7 @@ public class CataloloPeliclasPresentacion {
                     break;
                 case 2:
                     //sc.nextLine();
-                    System.out.println("Indroduce nombre de la Pelicuala");
+                    System.out.println("Indroduce nombre de la Pelicula");
                     String pelicula = sc.nextLine();
                     
                     catalogoPeliculas.agregarPelicula(pelicula, nombreArchivo);
@@ -67,14 +67,4 @@ public class CataloloPeliclasPresentacion {
         
                 
     }
-//    static void imprimirMenu(){
-//            
-//            System.out.println("1.Iniciar Catalogo Pelicuas");
-//            System.out.println("2.Agregar Película");
-//            System.out.println("3.Listar Peliculas");
-//            System.out.println("4.Buscar Película");
-//            System.out.println("0. Salir");
-//            System.out.println("Introduzca una opción:");
-//            opcion = sc.nextInt();
-//        }
 }
